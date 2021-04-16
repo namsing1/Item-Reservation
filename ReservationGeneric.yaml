@@ -31,6 +31,7 @@ spec:
     spec:
       containers:
       - name: reservation
-        image: docker.io/namsing1/nodejs:latest
+        image: namsing1/item-reservation:latest
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8093
