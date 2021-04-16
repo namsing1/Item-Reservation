@@ -4,9 +4,7 @@ WORKDIR /usr/src/reservation
 
 COPY package*.json ./
 
-RUN npm help
-
-RUN npm install
+RUN npm clean-install
 #CMD [ "npm", "install" ]
 
 COPY . .
