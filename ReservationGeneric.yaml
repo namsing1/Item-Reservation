@@ -29,6 +29,6 @@ spec:
     spec:
       containers:
       - name: reservation
-        image: docker.io/debanjande/ora-reservation-v1
+        image: namsing1/item-reservation:latest
         ports:
         - containerPort: 8093
