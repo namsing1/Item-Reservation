@@ -4,7 +4,7 @@ metadata:
   name: reservation-svc
   namespace: helidon-deployment
   labels:
-    app: itemreservation-msa
+    app: reservation-svc
 spec:
   type: NodePort
   ports:
@@ -12,7 +12,7 @@ spec:
     targetPort: 8093
     nodePort: 32046
   selector:
-    app: itemreservation-msa
+    app: reservation-svc
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -22,12 +22,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: itemreservation-msa
+      app: reservation-svc
   replicas: 1
   template:
     metadata:
       labels:
-        app: itemreservation-msa
+        app: reservation-svc
     spec:
       containers:
       - name: reservation
