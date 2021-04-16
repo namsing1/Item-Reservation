@@ -10,7 +10,7 @@ spec:
   ports:
   - port: 8093
     targetPort: 8093
-    nodePort: 31093
+    nodePort: 32046
   selector:
     app: itemreservation-msa
 ---
