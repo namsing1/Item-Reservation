@@ -1,10 +1,10 @@
-FROM node:lts
+FROM node:8
 
 WORKDIR /usr/src/reservation
 
 COPY package*.json ./
 
-RUN npm clean-install
+RUN npm install
 #CMD [ "npm", "install" ]
 
 COPY . .
