@@ -10,7 +10,7 @@ spec:
   ports:
   - port: 8093
     targetPort: 8093
-    nodePort: 32046
+    nodePort: 32047
   selector:
     app: reservation-svc
 ---
