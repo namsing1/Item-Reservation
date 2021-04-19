@@ -73,9 +73,9 @@ var //onhand_source = onhand_source_init+"/onhandquery/find/",
     onhand_path = '/item-reservation/on-hand/',
     reserv_path = '/item-reservation/reserve/', //'/crt_rsv/rsv/',
     protocal = "http://",
-    onhand_port = '32047', //"31092",
-    reserv_port = '32047',
-    itemsearch_port = '32047'; //"31091";
+    onhand_port = '32045', //"31092",
+    reserv_port = '32045',
+    itemsearch_port = '32045'; //"31091";
     //onhand_port = "8092",
     //itemsearch_port = "8091";
 
