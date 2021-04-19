@@ -22,7 +22,7 @@ function getItemDetailsText(){
     if (this.readyState == 4) {
       //alert('Inside onreadystatechange function ready state = '+this.responseText);
       if (this.status == 200) {
-        //alert("'Inside onreadystatechange function status=200 ="+this.responseText);
+        alert("'Inside onreadystatechange function status=200 ="+this.responseText);
         document.getElementById("srchresp").innerHTML = this.responseText;
         var allItems = JSON.parse(this.responseText).items;
         var itemDescMap = {};
