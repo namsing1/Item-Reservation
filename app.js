@@ -75,7 +75,7 @@ var //onhand_source = onhand_source_init+"/onhandquery/find/",
     protocal = "http://",
     onhand_port = '8091', //"31092",
     reserv_port = '32045',
-    itemsearch_port = '32045'; //"31091";
+    itemsearch_port = '30525'; //"31091";
     //onhand_port = "8092",
     //itemsearch_port = "8091";
 
