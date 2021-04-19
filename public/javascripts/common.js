@@ -17,10 +17,10 @@ function getItemDetailsText(){
       item_limit = document.getElementById("item_limit_hidden").innerHTML,
       item_offset = document.getElementById("item_offset_hidden").innerHTML;
   xhttp.onreadystatechange = function() {
-    //alert('Inside onreadystatechange function = '+this.responseText);
-    //alert("'Status = "+this.status+"; Ready State = "+this.readyState+';');
+    alert('Inside onreadystatechange function = '+this.responseText);
+    alert("'Status = "+this.status+"; Ready State = "+this.readyState+';');
     if (this.readyState == 4) {
-      //alert('Inside onreadystatechange function ready state = '+this.responseText);
+      alert('Inside onreadystatechange function ready state = '+this.responseText);
       if (this.status == 200) {
         alert("'Inside onreadystatechange function status=200 ="+this.responseText);
         document.getElementById("srchresp").innerHTML = this.responseText;
@@ -52,7 +52,7 @@ function getItemDetailsText(){
           }
         }
       }else{
-        //alert("'Inside onreadystatechange function status <> 200 ="+this.responseText+";");
+        alert("'Inside onreadystatechange function status <> 200 ="+this.responseText+";");
         document.body.innerHTML = this.responseText;
       }
     }
