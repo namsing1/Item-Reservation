@@ -4,6 +4,8 @@ WORKDIR /usr/src/reservation
 
 COPY package*.json ./
 
+RUN curl google.com
+
 RUN npm install
 #CMD [ "npm", "install" ]
 
