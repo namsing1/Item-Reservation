@@ -4,9 +4,9 @@ WORKDIR /usr/src/reservation
 
 COPY package*.json ./
 
-RUN curl google.com
+#RUN curl google.com
 
-RUN npm install
+#RUN npm install
 #CMD [ "npm", "install" ]
 
 COPY . .
