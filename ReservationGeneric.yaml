@@ -6,11 +6,10 @@ metadata:
   labels:
     app: reservation-svc
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 8093
     targetPort: 8093
-    nodePort: 32047
   selector:
     app: reservation-svc
 ---
@@ -31,7 +30,7 @@ spec:
     spec:
       containers:
       - name: reservation
-        image: namsing1/item-reservation:latest
+        image: namsing1/reservation-svc:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8093
