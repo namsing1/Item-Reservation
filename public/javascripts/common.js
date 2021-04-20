@@ -17,12 +17,12 @@ function getItemDetailsText(){
       item_limit = document.getElementById("item_limit_hidden").innerHTML,
       item_offset = document.getElementById("item_offset_hidden").innerHTML;
   xhttp.onreadystatechange = function() {
-    alert('Inside onreadystatechange function = '+this.responseText);
-    alert("'Status = "+this.status+"; Ready State = "+this.readyState+';');
+   // alert('Inside onreadystatechange function = '+this.responseText);
+  //  alert("'Status = "+this.status+"; Ready State = "+this.readyState+';');
     if (this.readyState == 4) {
-      alert('Inside onreadystatechange function ready state = '+this.responseText);
+     // alert('Inside onreadystatechange function ready state = '+this.responseText);
       if (this.status == 200) {
-        alert("'Inside onreadystatechange function status=200 ="+this.responseText);
+      //  alert("'Inside onreadystatechange function status=200 ="+this.responseText);
         document.getElementById("srchresp").innerHTML = this.responseText;
         var allItems = JSON.parse(this.responseText).items;
         var itemDescMap = {};
@@ -52,7 +52,7 @@ function getItemDetailsText(){
           }
         }
       }else{
-        alert("'Inside onreadystatechange function status <> 200 ="+this.responseText+";");
+      //  alert("'Inside onreadystatechange function status <> 200 ="+this.responseText+";");
         document.body.innerHTML = this.responseText;
       }
     }
@@ -159,7 +159,7 @@ function createReservation(rw) {
   }*/
   var inp = org_code+"/"+sub_inv+"/"+item_num+"/"+rsv_qty;
   var reserv_url = "{{ protocal }}"+"{{ reserv_srch_host }}"/*window.location.hostname*/+":{{ reserv_srch_port }}{{ reserv_create_path }}"+inp;
-  //alert(reserv_url);
+  alert(reserv_url);
   if(window.XMLHttpRequest){
     xhttp=new XMLHttpRequest();//for Chrome, mozilla etc
   }else if(window.ActiveXObject){
@@ -250,8 +250,8 @@ function addItemReqTab(inum,idsc,iunit,idx) {
   row.appendChild(cell_onhand_btn);
   cell_rsv_btn.innerHTML = "<a id='rsvbutton_row'" + idx + " class='btn btn-default' onclick='createReservation(this)'>{{ create_req_btn_txt }}</a>";
   row.appendChild(cell_rsv_btn);
-  cell_del_btn.innerHTML = "<a id='delete_row'" + idx + " class='btn btn-default' onclick='deleteRow(this)'>{{ delrow_txt }}</a>";
-  row.appendChild(cell_del_btn);
+  //cell_del_btn.innerHTML = "<a id='delete_row'" + idx + " class='btn btn-default' onclick='deleteRow(this)'>{{ delrow_txt }}</a>";
+  //row.appendChild(cell_del_btn);
   document.getElementById("reqtable").appendChild(row);
 }
 
