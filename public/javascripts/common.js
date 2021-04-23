@@ -250,8 +250,8 @@ function addItemReqTab(inum,idsc,iunit,idx) {
   row.appendChild(cell_onhand_btn);
   cell_rsv_btn.innerHTML = "<a id='rsvbutton_row'" + idx + " class='btn btn-default' onclick='createReservation(this)'>{{ create_req_btn_txt }}</a>";
   row.appendChild(cell_rsv_btn);
-  cell_del_btn.innerHTML = "<a id='delete_row'" + idx + " class='btn btn-default' onclick='deleteRow(this)'>{{ delrow_txt }}</a>";
-  row.appendChild(cell_del_btn);
+ // cell_del_btn.innerHTML = "<a id='delete_row'" + idx + " class='btn btn-default' onclick='deleteRow(this)'>{{ delrow_txt }}</a>";
+ // row.appendChild(cell_del_btn);
   document.getElementById("reqtable").appendChild(row);
 }
 
